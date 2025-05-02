@@ -1,14 +1,23 @@
+# get_next_line
 
-## About
-The `aim` of this projct is creating a function called `get_next_line()` in which when it's called in a loop, it'll read the text within the file descriptor `one line at a time` until the end of the file.
+## 📌 About
 
-1) The function works both when reading a file and when reading from the `standard input`
-2) The project return value is the `line that was read`. However, if there is nothing else to read or if an error occurred, it `returns NULL`.
-3) The returned line includes the terminating \n character except if the end of file was reached and does not end with a \n character.
+The goal of this project is to implement a function called `get_next_line()` that reads and returns one line at a time from a given file descriptor. Each call to the function reads the next line until the end of the file is reached.
 
+- The function supports reading from both files and standard input.
+- It returns the next line, including the trailing newline character (`\n`), unless the line is the last one in the file and doesn't end with a newline.
+- If there is nothing more to read or if an error occurs, it returns `NULL`.
 
-The project directory contains two executables `Mandatory` & `Bonus`, the first is to read from one file descriptors and the second one is to read from multiple file descriptors.
+The project is divided into two parts:
+- **Mandatory**: Handles reading from a single file descriptor.
+- **Bonus**: Adds support for reading from multiple file descriptors simultaneously.
 
-The purpose of this project was learning deeply about open(), read(), close(), static variables and file descriptors.
+This project was a deep dive into system-level file operations using `open()`, `read()`, and `close()`, as well as managing static variables and handling buffers correctly. One of the main challenges was ensuring the function could handle any buffer size and read input without losing or misplacing characters. Overcoming these challenges helped solidify my understanding of low-level I/O operations in C.
 
-In this project learning about the buffer and finding the solution to make my function read any amount of text corectly without messing up any character from a file descriptor or from the standard output was challenging. Learning about the functions open(), read() and close() contributed in finding the right path to find the best solution.
+## ⚙️ Usage
+
+To compile and test the project:
+
+```bash
+make
+./mandatory < your_file.txt
