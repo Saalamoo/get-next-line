@@ -1,4 +1,4 @@
-## 📌 About
+## About
 
 The goal of this project is to implement a function called `get_next_line()` that reads and returns one line at a time from a given file descriptor. Each call to the function reads the next line until the end of the file is reached.
 
@@ -12,7 +12,7 @@ The project is divided into two parts:
 
 This project was a deep dive into system-level file operations using `open()`, `read()`, and `close()`, as well as managing static variables and handling buffers correctly. One of the main challenges was ensuring the function could handle any buffer size and read input without losing or misplacing characters. Overcoming these challenges helped solidify my understanding of low-level I/O operations in C.
 
-## ⚙️ Compilation & Usage
+## Compilation
 
 ### Mandatory Part (Single File Descriptor)
 
